@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./js/orçamento-form.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <legend>Adicionar serviços:</legend>
+            </div>
+            <!-- panel preview -->
+            <div class="col-sm-5">
+                <h4>serviços:</h4>
+                <div class="panel panel-default">
+                    <div class="panel-body form-horizontal payment-form">
+                        <div class="form-group">
+                            <label for="concept" class="col-sm-3 control-label">Código</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="concept" name="concept">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-sm-3 control-label">Descrição</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="description" name="description">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount" class="col-sm-3 control-label">Quantidade</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="amount" name="amount">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="status" class="col-sm-3 control-label">Valor</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="status" name="status" min="0.00"
+                                    max="10000.00" step="0.01" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12 text-right">
+                                <button type="button" class="btn btn-default preview-add-button">
+                                    <span class="glyphicon glyphicon-plus"></span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- / panel preview -->
+            <div class="col-sm-7">
+                <h4>Preview:</h4>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="table-responsive">
+                            <table class="table preview-table">
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Descrição</th>
+                                        <th>Quantidade</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody> <!-- preview content goes here-->
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-right">
+                    <div class="col-xs-12">
+                        <h4>Total: <strong><span class="preview-total"></span></strong></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr style="border:1px dashed #dddddd;">
+                        <button type="button" class="btn btn-primary btn-block">Submit all and finish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
